@@ -3,7 +3,7 @@ test: black mypy pylint
 	make clean
 
 black:
-	black -l 86 $$(find * -name '*.py')
+	black -l 86 --check $$(find * -name '*.py')
 
 mypy:
 	mypy $$(find * -name '*.py') 
